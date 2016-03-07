@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+		<link rel = "stylesheet" type = "text/css" href = "../css/bootstrap.min.css">
+		<title>Add ldap user</title>
+	</head>
+<body class="container">
+<form class="form" action = "ldapadduser.php" method = "get">
+	<table class="table table-condensed">
+		<tr clo>
+			<td colspan="2" id="header">Register User</td>
+		</tr>
+		<tr>
+			<td><label for="username">Username:</label></td>
+			<td><input type="text" class="input" id="username" name="username" required></td>
+		</tr>
+		<tr>
+			<td><label for = "firstname">First Name:</label> </td>
+			<td><input class = "input" type ="text" id = "firstname" name="firstname" required ></td>
+		</tr>
+		<tr>
+			<td><label for="lastname">Last Name:</label></td>
+			<td><input class="input" type ="text" id = "lastname" name="lastname" required> </td>
+		</tr>
+		<tr>
+			<td colspan="2" class="submit"><input type="submit" value="Submit" class="btn btn-default btn-lg btn-block btn-info"></td>
+		</tr>
+	</table>
+</form>
+
+
+</body>
+</html>
