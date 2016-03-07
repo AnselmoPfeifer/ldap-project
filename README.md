@@ -1,4 +1,4 @@
-# 	File created by Anselmo Pfeifer - Reference www.anselmopfeifer.com
+ 	File created by Anselmo Pfeifer 
 
 	If your server not Has received update and upgrade
 	Execute script update.
