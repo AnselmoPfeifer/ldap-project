@@ -13,9 +13,9 @@
 	$bind = @ldap_bind($connect, $user, $pass);
 	$group = "Groups";
 
-	$cn = htmlspecialchars($_GET['username']);
-	$givenName = htmlspecialchars($_GET['firstname']);
-	$surname = htmlspecialchars($_GET['lastname']);
+	$cn = htmlspecialchars($_POST['username']);
+	$givenName = htmlspecialchars($_POST['firstname']);
+	$surname = htmlspecialchars($_POST['lastname']);
 
 	$ds = @ldap_connect("ldap://127.0.0.1") or die ("Could not connect to LDAP Server");
 	echo $ds;
@@ -28,7 +28,7 @@
 		$r = @ldap_add($ds,"cn=$cn,ou=$group,dc=test,dc=zl0,dc=co",$info);
 		$sr = @ldap_search($ds,"dc=test,dc=zl0,dc=co","cn=$cn");
 		$info = @ldap_get_entries($ds,$sr);
-		echo "The user:<span class='result'> " . $info[0]["dn"] . "</span> has been created. <br>";
+		//echo "The user:<span class='result'> " . $info[0]["dn"] . "</span> has been created. <br>";
 		echo "Login: $cn <br>";
 		echo "First Name: $givenName <br>";
 		echo "Last Name: $surname <br>";
