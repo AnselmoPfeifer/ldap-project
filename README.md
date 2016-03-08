@@ -1,6 +1,6 @@
- # File created by Anselmo Pfeifer 
- # Execute permission in files 
- # cd scripts/ && chmod +x *.sh
+# File created by Anselmo Pfeifer 
+ 	Execute permission in files 
+ 	cd scripts/ && chmod +x *.sh
 
 	If your server not Has received update and upgrade
 	Read script update.sh
