@@ -1,4 +1,4 @@
-# File created by Anselmo Pfeifer 
+# Scripts to install and config ldap, lam 
  	Execute permission in files 
  	cd scripts/ && chmod +x *.sh
 
