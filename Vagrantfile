@@ -4,7 +4,10 @@ Vagrant.configure("2") do |config|
 	config.vm.network "forwarded_port", guest: 80, host: 8081
 	config.vm.hostname = "ldap"
 
-#	config.vm.provision "shell", path: "apache2.sh"
+#	config.vm.provision "shell", path: "scripts/update.sh"
+#	config.vm.provision "shell", path: "scripts/apache2.sh"
+#	config.vm.provision "shell", path: "scripts/ldap.sh"
+#	config.vm.provision "shell", path: "scripts/config-ldap.sh"
 
 	config.vm.provider :virtualbox do |vb|
     	vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]

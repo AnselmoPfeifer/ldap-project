@@ -4,6 +4,7 @@
 #!/bin/bash
 aptitude -y install apache2
 aptitude -y install php5
+aptitude -y install git
 aptitude -y install zip
 aptitude -y install ldap-account-manager
 aptitude -y install php5-ldap
@@ -20,7 +21,7 @@ rm -rf /var/www/*
 cp -rf files/var/www/* /var/www/
 cp files/etc/apache2/apache2.conf /etc/apache2/
 cp files/etc/apache2/sites-available/default.conf /etc/apache2/sites-available/
-cp /vagrant/files/usr/share/ldap-account-manager/config/lam.conf /usr/share/ldap-account-manager/config/
+cp files/usr/share/ldap-account-manager/config/lam.conf /usr/share/ldap-account-manager/config/
 
 
 chown www-data:www-data -R /var/www/ && sudo chmod 755 -R  /var/www/

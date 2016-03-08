@@ -1,24 +1,26 @@
  # File created by Anselmo Pfeifer 
+	Execute permission in files 
+	cd scripts/ && chmod +x *.sh
 
 	If your server not Has received update and upgrade
-	Execute script update.
 	Read script update.sh
-	- chmod +x update.sh and ./update.sh
+	Execute script update.
+	- ./update.sh
 	
 	To install Apache2 and PHP5 
-	Execute script apache2.sh
 	Read script apache2.sh
-	- chmod +x apache2.sh and ./apache2.sh
+	Execute scripts/apache2.sh
+	- ./apache2.sh
 
-
-	To install OpenLdap execute script ldap.sh
+	To install OpenLdap 
 	Read script ldap.sh
-	- chmod +x ldap.sh and ./ldap.sh
+	Execute script ldap.sh
+	- ./ldap.sh
 
-
-	To configure openldap execute script confi-ldap.sh
+	To configure openldap, import files the config to ldap and ldap-admin 
 	Read script config-ldap.sh
-	- chmod +x config-ldap.sh and ./config-ldap.sh
+	Execute script config-ldap.sh
+	- ./config-ldap.sh
 
 	OBS: Access http://IP/lam/
 	Password: p@ssw0rd999
@@ -40,6 +42,6 @@
 	Atention the script config.sh edits the files /etc/hostname and /etc/hosts
 	Is important to OpenLdap; You can alter the files or execute script
 	Read script config.sh
-	- chmod +x config.sh and ./config.sh
+	- ./config.sh
 
-	OBS: After run confi.sh system reboot
+	OBS: After run config.sh system reboot
