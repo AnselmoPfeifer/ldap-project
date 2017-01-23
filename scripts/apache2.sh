@@ -10,6 +10,8 @@ aptitude -y install zip
 aptitude -y install ldap-account-manager
 aptitude -y install php5-ldap
 aptitude -y install libapache2-mod-php5
+# Ubuntu16
+# apt-get install libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-json
 
 /etc/init.d/apache2 start
 
