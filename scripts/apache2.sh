@@ -2,6 +2,7 @@
 # Reference www.anselmopfeifer.com
 
 #!/bin/bash
+apt-get install aptitude -y
 aptitude -y install apache2
 aptitude -y install php5
 aptitude -y install git
