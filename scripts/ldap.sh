@@ -4,7 +4,7 @@
 #!/bin/bash
 apt-get update
 apt-get -y install apt-utils
-apt-get -y install curl sudo net-tools procps vim ldap-utils
+apt-get -y install curl sudo net-tools procps vim
 apt-get -y install rsyslog
 
 echo "slapd slapd/root_password password p@ssw0rd999" |debconf-set-selections
