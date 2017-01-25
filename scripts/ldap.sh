@@ -21,3 +21,6 @@ echo "slapd slapd/move_old_database boolean true" |debconf-set-selections
 echo "slapd slapd/allow_ldap_v2 boolean false" |debconf-set-selections
 echo "slapd slapd/no_configuration boolean false" |debconf-set-selections
 apt-get install -y slapd ldap-utils
+
+# ubuntu 16
+# apt-get -y install libnss-ldap libpam-ldap ldap-utils
