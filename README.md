@@ -1,29 +1,46 @@
-# Scripts to install and config ldap, lam 
+# The LDap project
+
+### Scripts to install and config ldap, lam 
 - Set files permission:
-```cd scripts/ && chmod +x *.sh```
+```
+cd scripts/
+chmod +x *.sh
+```
 
 - If server dont have received update and upgrade, execute update script.
-```./update.sh```
+```
+./update.sh
+```
 
 - To install Apache2 and PHP5, execute scripts/apache2.sh
-```./apache2.sh```
+```
+./apache2.sh
+```
 
 - To install OpenLdap execute script ldap.sh
-```./ldap.sh```
+```
+./ldap.sh
+```
 
 - To configure openldap, import files the config to ldap and ldap-admin, execute script config-ldap.sh
-```./config-ldap.sh```
+```
+./config-ldap.sh
+```
 
 - Test access http://IP/lam/
 - Password: p@ssw0rd999
 
-- Import groups 
+- To import groups 
 PS: read file in files/ldif/company.ldif
-```ldapadd -x -D cn=admin,dc=test,dc=zl0,dc=co -W -f files/ldif/company.ldif```
-- Asks password: p@ssw0rd999
+```
+ldapadd -x -D cn=admin,dc=test,dc=zl0,dc=co -W -f files/ldif/company.ldif
+```
+- Will be asked the password: p@ssw0rd999
 
 - To test serach in ldap execute the commands bellow
-```ldapsearch -h ldap.test.zl0.co -p 389 -b "DC=test,DC=zl0,Dc=co" -D "CN=admin,dc=test,dc=zl0,dc=co" -w "p@ssw0rd999"````
+```
+dapsearch -h ldap.test.zl0.co -p 389 -b "DC=test,DC=zl0,Dc=co" -D "CN=admin,dc=test,dc=zl0,dc=co" -w "p@ssw0rd999"
+```
 
 - Web admin e insert users
 ```http://IP/```
