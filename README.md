@@ -43,12 +43,18 @@ dapsearch -h ldap.test.zl0.co -p 389 -b "DC=test,DC=zl0,Dc=co" -D "CN=admin,dc=t
 ```
 
 - Web admin e insert users
-```http://IP/```
+```
+http://IP/
+```
 
 - Admin Ldap
-```http://IP/lam/ - password: p@ssw0rd999```
+```
+http://IP/lam/ - password: p@ssw0rd999
+```
 
 ### Atention the script config.sh set the values on the files /etc/hostname and /etc/hosts
 This is must important for OpenLdap server; you can edit these files or execute the config.sh script
-```./config.sh```
+```
+./config.sh
+```
 * PS: After run config.sh make sure the system is rebooted
