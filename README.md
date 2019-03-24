@@ -1,47 +1,37 @@
 # Scripts to install and config ldap, lam 
- 	Execute permission in files 
- 	cd scripts/ && chmod +x *.sh
+- Set files permission:
+```cd scripts/ && chmod +x *.sh```
 
-	If your server not Has received update and upgrade
-	Read script update.sh
-	Execute script update.
-	- ./update.sh
-	
-	To install Apache2 and PHP5 
-	Read script apache2.sh
-	Execute scripts/apache2.sh
-	- ./apache2.sh
+- If server dont have received update and upgrade, execute update script.
+```./update.sh```
 
-	To install OpenLdap 
-	Read script ldap.sh
-	Execute script ldap.sh
-	- ./ldap.sh
+- To install Apache2 and PHP5, execute scripts/apache2.sh
+```./apache2.sh```
 
-	To configure openldap, import files the config to ldap and ldap-admin 
-	Read script config-ldap.sh
-	Execute script config-ldap.sh
-	- ./config-ldap.sh
+- To install OpenLdap execute script ldap.sh
+```./ldap.sh```
 
-	OBS: Access http://IP/lam/
-	Password: p@ssw0rd999
+- To configure openldap, import files the config to ldap and ldap-admin, execute script config-ldap.sh
+```./config-ldap.sh```
 
-	Import groups 
-	Obs: read file in files/ldif/company.ldif
-	- ldapadd -x -D cn=admin,dc=test,dc=zl0,dc=co -W -f files/ldif/company.ldif
-	Asks password: p@ssw0rd999
+- Test access http://IP/lam/
+- Password: p@ssw0rd999
 
-	To test serach in ldap execute the commands bellow
-	- ldapsearch -h ldap.test.zl0.co -p 389 -b "DC=test,DC=zl0,Dc=co" -D "CN=admin,dc=test,dc=zl0,dc=co" -w "p@ssw0rd999"
+- Import groups 
+PS: read file in files/ldif/company.ldif
+```ldapadd -x -D cn=admin,dc=test,dc=zl0,dc=co -W -f files/ldif/company.ldif```
+- Asks password: p@ssw0rd999
 
-	Web admin e insert users
- 	- http://IP/
+- To test serach in ldap execute the commands bellow
+```ldapsearch -h ldap.test.zl0.co -p 389 -b "DC=test,DC=zl0,Dc=co" -D "CN=admin,dc=test,dc=zl0,dc=co" -w "p@ssw0rd999"````
 
-	Admin Ldap
-	- http://IP/lam/ - password: p@ssw0rd999
+- Web admin e insert users
+```http://IP/```
 
-	Atention the script config.sh edits the files /etc/hostname and /etc/hosts
-	Is important to OpenLdap; You can alter the files or execute script
-	Read script config.sh
-	- ./config.sh
+- Admin Ldap
+```http://IP/lam/ - password: p@ssw0rd999```
 
-	OBS: After run config.sh system reboot
+### Atention the script config.sh set the values on the files /etc/hostname and /etc/hosts
+This is must important for OpenLdap server; you can edit these files or execute the config.sh script
+```./config.sh```
+* PS: After run config.sh make sure the system is rebooted
